@@ -1,0 +1,31 @@
+# Student Identity
+
+Milestone 3
+
+- Nama  : Firman
+- Batch : BSD - 007
+- Objective : This note is a copy of SQL Query from postgres.
+
+
+
+
+CREATE TABLE table_m3 (
+	"Clothing ID" NUMERIC,
+	"Age" NUMERIC,
+	"Title" VARCHAR(100),
+	"Review Tex" VARCHAR(5000),
+	"Rating" NUMERIC,
+	"Recommended IND" NUMERIC,
+	"Positive Feedback Count" NUMERIC,
+	"Division Name" VARCHAR(100),
+	"Department Name" VARCHAR(100),
+	"Class Name" VARCHAR(100)
+);
+
+COPY table_m3(Clothing_ID,Age,Title,Review_Text,Rating,Recommended_IND,Positive_Feedback_Count,
+	Division_Name,Department_Name,Class_Name)
+FROM '/Users/firman/Downloads/Persiapan_M3_LC/dags/P2M3_firman_data_raw.csv'
+WITH (FORMAT csv, HEADER true);
+
+SELECT * FROM table_m3
+
